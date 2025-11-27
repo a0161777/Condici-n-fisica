@@ -34,7 +34,19 @@ def user_input_features():
 
   return features
 
-df = user_input_features()
+def user_input_features():
+    height_cm = st.number_input('Altura (en cm):', min_value=1, max_value=254, value=170)
+    weight_kg = st.number_input('Peso (kg):', min_value=1, max_value=300, value=60)
+    age = st.number_input('Edad:', min_value=1, max_value=120, value=20)
+
+    data = {
+        'altura_cm': height_cm,
+        'peso_kg': weight_kg,
+        'edad': age
+    }
+
+    features = pd.DataFrame(data, index=[0])
+    return features
 
 titanic =  pd.read_csv('Fit_prediction.csv', encoding='latin-1')
 X = titanic.drop(columns='is_fit')
