@@ -13,7 +13,7 @@ st.header('Datos del paciente')
 def user_input_features():
   # Entrada
   age = st.number_input('Edad:', min_value=1, max_value=100, value = 1, step = 1)
-  height_cm = st.number_input('Altura (en cm):', min_value=1, max_value=254, value = 0, step = 1)
+  height_cm = st.number_input('Altura (en cm):', min_value=1, max_value=254, value = 170, step = 1)
   weight_kg = st.number_input('Peso (en kg):', min_value=0, max_value=100, value = 0, step = 1)
   heart_rate = st.number_input('Latidos por minuto:',min_value=0, max_value=200, value = 0, step = 1)
   blood_pressure = st.number_input('presión arterial:', min_value=0, max_value=250, value = 0, step = 1)
